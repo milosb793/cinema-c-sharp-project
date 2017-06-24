@@ -1,0 +1,75 @@
+﻿using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+//using GLib;
+using System.Collections.Generic;
+using System.Collections;
+//using GLib;
+
+namespace Bioskop
+{
+
+	public static class Metode
+	{
+		public const int Jedan = 0;
+		public const int Niz = 1;
+		public const int Lista = 2;
+
+
+
+		public static bool proveriUnos(String s, int min, int max)
+		{
+			if (s.Length == 0)
+				return false;
+			else if (s.Length < min || s.Length > max)
+				return false;
+			else
+				return true;
+		}
+
+		public static void upisiUDatoteku(string datoteka, object obj, bool append=false, int vrstaObjekta=0)
+		{
+			switch (vrstaObjekta) 
+			{
+				case 0:{
+						Serijalizacija.WriteToBinaryFile (datoteka,obj,append);
+						break;
+
+					}
+				case 1:{
+						object[] niz = (object[])obj;
+						for (int i = 0; i < niz.Length; i++) 
+						{
+							Serijalizacija.WriteToBinaryFile (datoteka,niz[i],append);
+						}
+						break;
+					}
+				case 2:{
+						List<object> lo =  (List<object>)obj;
+						List<object> lio = new List<object> ();
+						foreach(object o in lo)  
+						{
+							lio.Add(o);
+						}
+
+						foreach (object single in lio) 
+						{
+							Serijalizacija.WriteToBinaryFile (datoteka,single,append);
+						}
+						break;
+					}
+			}
+
+		}
+
+		//		public static List procitajSveIzDatoteke(string klasa,string datoteka)
+		//		{
+		//			return Serijalizacija.ReadFromBinaryFile<List> (datoteka);
+		//		}
+
+
+
+
+	}
+}
+

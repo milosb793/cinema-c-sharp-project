@@ -1,0 +1,7 @@
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk2/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk2/bin/Debug/Eto.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk2/bin/Debug/Eto.Gtk2.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk2/bin/Debug/bioskop.Gtk2.exe.mdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk2/bin/Debug/bioskop.Gtk2.exe
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk2/obj/x86/Debug/bioskop.Gtk2.exe
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk2/obj/x86/Debug/bioskop.Gtk2.exe.mdb

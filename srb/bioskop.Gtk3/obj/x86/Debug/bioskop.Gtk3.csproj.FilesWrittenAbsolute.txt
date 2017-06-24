@@ -1,0 +1,10 @@
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/bin/Debug/bioskop.Gtk3.exe.mdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/bin/Debug/bioskop.Gtk3.exe
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/obj/x86/Debug/bioskop.Gtk3.exe
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/obj/x86/Debug/bioskop.Gtk3.exe.mdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/bin/Debug/Eto.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/bin/Debug/Eto.Gtk3.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/bin/Debug/bioskop.Gtk3.pdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/obj/x86/Debug/bioskop.Gtk3.pdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.Gtk3/obj/x86/Debug/bioskop.Gtk3.skladistenje.img.Search.png

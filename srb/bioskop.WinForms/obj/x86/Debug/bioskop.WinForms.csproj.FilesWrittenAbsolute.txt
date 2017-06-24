@@ -1,0 +1,16 @@
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/bioskop.WinForms.exe.mdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/bioskop.WinForms.exe
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/obj/x86/Debug/bioskop.WinForms.exe
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/obj/x86/Debug/bioskop.WinForms.exe.mdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/Eto.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/Eto.WinForms.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/atk-sharp.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/cairo-sharp.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/gdk-sharp.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/gio-sharp.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/glib-sharp.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/gtk-sharp.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/gtk-dotnet.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/pango-sharp.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.WinForms/bin/Debug/Eto.Gtk3.dll

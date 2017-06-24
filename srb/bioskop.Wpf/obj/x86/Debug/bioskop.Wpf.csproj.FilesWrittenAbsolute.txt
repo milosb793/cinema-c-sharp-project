@@ -1,0 +1,9 @@
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/bin/Debug/Eto.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/bin/Debug/Eto.Wpf.dll
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/bin/Debug/bioskop.Wpf.exe.mdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/bin/Debug/bioskop.Wpf.exe
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/obj/x86/Debug/bioskop.Wpf.exe
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/obj/x86/Debug/bioskop.Wpf.exe.mdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/bin/Debug/bioskop.Wpf.pdb
+/home/logos/MonodevelopProjects/bioskop/bioskop.Wpf/obj/x86/Debug/bioskop.Wpf.pdb

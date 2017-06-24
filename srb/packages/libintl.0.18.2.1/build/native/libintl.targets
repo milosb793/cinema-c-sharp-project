@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="libintl_init">
+  <PropertyGroup Label="Debug and static and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libintl)' == 'static' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Debug and dynamic and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-libintl)' == 'dynamic' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Release and static and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-libintl)' == 'static' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="RuntimeLibraryNull" Condition="('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-libintl Condition="'$(Linkage-libintl)' == ''">dynamic</Linkage-libintl>
+    <CallingConvention-libintl Condition="'$(CallingConvention-libintl)' == ''">cdecl</CallingConvention-libintl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\libintl-propertiesui-b0af9688-852f-4ab3-88c9-a97531ec6712.xml" />
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>ENABLE_NLS=1;HAVE_LIBINTL_H=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>$(RuntimeLibrary)</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\build\native\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v110 and dynamic" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libintl)' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\dynamic\libintl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v110 and dynamic" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libintl)' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\dynamic\libintl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v100 and dynamic" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libintl)' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\dynamic\libintl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v100 and dynamic" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libintl)' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\dynamic\libintl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v110 and static" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libintl)' == 'static'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\static\libintl-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v110 and static" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libintl)' == 'static'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\static\libintl-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v100 and static" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libintl)' == 'static'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\static\libintl-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v100 and static" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libintl)' == 'static'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\static\libintl-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <UsingTask TaskName="libintl_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="libintl_init">
+    <libintl_Contains Text="Linkage-dynamic" Library="libintl" Value="dynamic" Condition="'$(Linkage-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libintl" />
+    </libintl_Contains>
+    <libintl_Contains Text="Linkage-static" Library="libintl" Value="static" Condition="'$(Linkage-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libintl" />
+    </libintl_Contains>
+    <libintl_Contains Text="Linkage-ltcg" Library="libintl" Value="ltcg" Condition="'$(Linkage-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libintl" />
+    </libintl_Contains>
+    <libintl_Contains Text="Linkage-sxs" Library="libintl" Value="sxs" Condition="'$(Linkage-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libintl" />
+    </libintl_Contains>
+    <libintl_Contains Text="CallingConvention-cdecl" Library="libintl" Value="cdecl" Condition="'$(CallingConvention-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl" />
+    </libintl_Contains>
+    <libintl_Contains Text="CallingConvention-stdcall" Library="libintl" Value="stdcall" Condition="'$(CallingConvention-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl" />
+    </libintl_Contains>
+    <libintl_Contains Text="CallingConvention-fastcall" Library="libintl" Value="fastcall" Condition="'$(CallingConvention-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl" />
+    </libintl_Contains>
+    <libintl_Contains Text="CallingConvention-thiscall" Library="libintl" Value="thiscall" Condition="'$(CallingConvention-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl" />
+    </libintl_Contains>
+    <libintl_Contains Text="CallingConvention-clrcall" Library="libintl" Value="clrcall" Condition="'$(CallingConvention-libintl)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl" />
+    </libintl_Contains>
+  </Target>
+</Project>

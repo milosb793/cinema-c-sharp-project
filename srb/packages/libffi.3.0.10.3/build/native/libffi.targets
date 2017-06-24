@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="libffi_init">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-libffi Condition="'$(Linkage-libffi)' == ''">dynamic</Linkage-libffi>
+    <CallingConvention-libffi Condition="'$(CallingConvention-libffi)' == ''">cdecl</CallingConvention-libffi>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>HAS_LIBFFI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\build\native\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v110 and dynamic and Release" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi)' == 'dynamic' And '$(Configuration)' == 'Release'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\dynamic\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\dynamic\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v110 and static and Release" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi)' == 'static' And '$(Configuration)' == 'Release'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\static\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\static\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v110 and dynamic and Release" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi)' == 'dynamic' And '$(Configuration)' == 'Release'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\dynamic\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\dynamic\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v110 and static and Release" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi)' == 'static' And '$(Configuration)' == 'Release'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\static\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\static\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v100 and dynamic and Release" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi)' == 'dynamic' And '$(Configuration)' == 'Release'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\dynamic\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\dynamic\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v100 and static and Release" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi)' == 'static' And '$(Configuration)' == 'Release'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\static\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\static\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v100 and dynamic and Release" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi)' == 'dynamic' And '$(Configuration)' == 'Release'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\dynamic\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\dynamic\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v100 and static and Release" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi)' == 'static' And '$(Configuration)' == 'Release'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\static\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\static\Release\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v110 and dynamic and Debug" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi)' == 'dynamic' And '$(Configuration)' == 'Debug'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\dynamic\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\dynamic\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v110 and static and Debug" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi)' == 'static' And '$(Configuration)' == 'Debug'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\static\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v110\static\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v110 and dynamic and Debug" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi)' == 'dynamic' And '$(Configuration)' == 'Debug'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\dynamic\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\dynamic\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v110 and static and Debug" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi)' == 'static' And '$(Configuration)' == 'Debug'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\static\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v110\static\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v100 and dynamic and Debug" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi)' == 'dynamic' And '$(Configuration)' == 'Debug'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\dynamic\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\dynamic\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v100 and static and Debug" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi)' == 'static' And '$(Configuration)' == 'Debug'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\static\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\Win32\v100\static\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v100 and dynamic and Debug" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi)' == 'dynamic' And '$(Configuration)' == 'Debug'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\dynamic\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\dynamic\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v100 and static and Debug" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi)' == 'static' And '$(Configuration)' == 'Debug'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\static\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\x64\v100\static\Debug\libffi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\libffi-propertiesui-f09a9869-8f51-4612-bc57-95c309bbdd23.xml" />
+  </ItemGroup>
+  <UsingTask TaskName="libffi_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="libffi_init">
+    <libffi_Contains Text="Linkage-dynamic" Library="libffi" Value="dynamic" Condition="'$(Linkage-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libffi" />
+    </libffi_Contains>
+    <libffi_Contains Text="Linkage-static" Library="libffi" Value="static" Condition="'$(Linkage-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libffi" />
+    </libffi_Contains>
+    <libffi_Contains Text="Linkage-ltcg" Library="libffi" Value="ltcg" Condition="'$(Linkage-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libffi" />
+    </libffi_Contains>
+    <libffi_Contains Text="Linkage-sxs" Library="libffi" Value="sxs" Condition="'$(Linkage-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libffi" />
+    </libffi_Contains>
+    <libffi_Contains Text="CallingConvention-cdecl" Library="libffi" Value="cdecl" Condition="'$(CallingConvention-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi" />
+    </libffi_Contains>
+    <libffi_Contains Text="CallingConvention-stdcall" Library="libffi" Value="stdcall" Condition="'$(CallingConvention-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi" />
+    </libffi_Contains>
+    <libffi_Contains Text="CallingConvention-fastcall" Library="libffi" Value="fastcall" Condition="'$(CallingConvention-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi" />
+    </libffi_Contains>
+    <libffi_Contains Text="CallingConvention-thiscall" Library="libffi" Value="thiscall" Condition="'$(CallingConvention-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi" />
+    </libffi_Contains>
+    <libffi_Contains Text="CallingConvention-clrcall" Library="libffi" Value="clrcall" Condition="'$(CallingConvention-libffi)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi" />
+    </libffi_Contains>
+  </Target>
+</Project>

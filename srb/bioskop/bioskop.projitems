@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{002075C5-C88A-46CF-A67E-3D98635105DB}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>bioskop</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MainForm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainForm.eto.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)modeli\Film.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)modeli\Karta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)modeli\Korisnik.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)modeli\Projekcija.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)modeli\Sala.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)kontroleri\Serijalizacija.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\AdministratorskiProzor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\KorisnickiProzor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\GlavniProzor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)kontroleri\Metode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)skladistenje\seeds\InicijalnoSejanje.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\Prijavljivanje.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\dodavanje\DodavanjeFilma.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\dodavanje\DodavanjeKarte.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\dodavanje\DodavanjeProjekcije.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\dodavanje\DodavanjeSale.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\izmena\IzmenaFilma.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\izmena\IzmenaKarte.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\izmena\IzmenaProjekcije.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\izmena\IzmenaSale.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)modeli\Zanr.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\komponente\Administratorski.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\komponente\Projekcijski.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\obrisi\ObrisiFilm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\komponente\Obavestenje.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\Registracija.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\obrisi\ObrisiSalu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\forme\obrisi\ObrisiProjekciju.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pregledi\komponente\Sedista.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)modeli\" />
+    <Folder Include="$(MSBuildThisFileDirectory)kontroleri\" />
+    <Folder Include="$(MSBuildThisFileDirectory)pregledi\" />
+    <Folder Include="$(MSBuildThisFileDirectory)skladistenje\" />
+    <Folder Include="$(MSBuildThisFileDirectory)skladistenje\seeds\" />
+    <Folder Include="$(MSBuildThisFileDirectory)pregledi\forme\" />
+    <Folder Include="$(MSBuildThisFileDirectory)pregledi\komponente\" />
+    <Folder Include="$(MSBuildThisFileDirectory)pregledi\forme\dodavanje\" />
+    <Folder Include="$(MSBuildThisFileDirectory)pregledi\forme\izmena\" />
+    <Folder Include="$(MSBuildThisFileDirectory)pregledi\forme\obrisi\" />
+    <Folder Include="$(MSBuildThisFileDirectory)skladistenje\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)skladistenje\img\Search.png">
+      <LogicalName>search-icon</LogicalName>
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

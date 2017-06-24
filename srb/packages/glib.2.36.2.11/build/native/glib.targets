@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="glib_init;glib_init_2">
+  <PropertyGroup Label="Debug and static and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'static' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Release and static and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'static' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Debug and ltcg and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'ltcg' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Release and ltcg and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'ltcg' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-glib Condition="'$(Linkage-glib)' == ''">dynamic</Linkage-glib>
+    <CallingConvention-glib Condition="'$(CallingConvention-glib)' == ''">cdecl</CallingConvention-glib>
+  </PropertyGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\glib-propertiesui-609caa2a-8013-4706-9cb1-15d24ad5e47a.xml" />
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>HAS_GLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../..//build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="static" Condition="'$(Linkage-glib.ToLower())' == 'static'">
+    <ClCompile>
+      <RuntimeLibrary>$(RuntimeLibrary)</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="ltcg" Condition="'$(Linkage-glib.ToLower())' == 'ltcg'">
+    <ClCompile>
+      <RuntimeLibrary>$(RuntimeLibrary)</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and dynamic" Condition="'$(PlatformToolset.ToLower())' == 'v100' And '$(Platform.ToLower())' == 'win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Release\dynamic\gthread-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Release\dynamic\gobject-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Release\dynamic\gmodule-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Release\dynamic\glib-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Release\dynamic\gio-2.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and dynamic" Condition="( $(PlatformToolset.ToLower().IndexOf('v110')) &gt; -1 Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And '$(Platform.ToLower())' == 'win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Release\dynamic\gthread-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Release\dynamic\gobject-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Release\dynamic\gmodule-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Release\dynamic\glib-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Release\dynamic\gio-2.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and dynamic" Condition="'$(PlatformToolset.ToLower())' == 'v100' And '$(Platform.ToLower())' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Release\dynamic\gthread-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Release\dynamic\gobject-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Release\dynamic\gmodule-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Release\dynamic\glib-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Release\dynamic\gio-2.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and dynamic" Condition="( $(PlatformToolset.ToLower().IndexOf('v110')) &gt; -1 Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And '$(Platform.ToLower())' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Release\dynamic\gthread-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Release\dynamic\gobject-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Release\dynamic\gmodule-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Release\dynamic\glib-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Release\dynamic\gio-2.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and dynamic" Condition="'$(PlatformToolset.ToLower())' == 'v100' And '$(Platform.ToLower())' == 'win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Debug\dynamic\gthread-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Debug\dynamic\gobject-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Debug\dynamic\gmodule-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Debug\dynamic\glib-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\Win32\Debug\dynamic\gio-2.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and dynamic" Condition="( $(PlatformToolset.ToLower().IndexOf('v110')) &gt; -1 Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And '$(Platform.ToLower())' == 'win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Debug\dynamic\gthread-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Debug\dynamic\gobject-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Debug\dynamic\gmodule-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Debug\dynamic\glib-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\Win32\Debug\dynamic\gio-2.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and dynamic" Condition="'$(PlatformToolset.ToLower())' == 'v100' And '$(Platform.ToLower())' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Debug\dynamic\gthread-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Debug\dynamic\gobject-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Debug\dynamic\gmodule-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Debug\dynamic\glib-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v100\x64\Debug\dynamic\gio-2.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and dynamic" Condition="( $(PlatformToolset.ToLower().IndexOf('v110')) &gt; -1 Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And '$(Platform.ToLower())' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Debug\dynamic\gthread-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Debug\dynamic\gobject-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Debug\dynamic\gmodule-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Debug\dynamic\glib-2.0.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/v110\x64\Debug\dynamic\gio-2.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Target Name="glib_init">
+    <glib_Contains Text="Linkage-dynamic" Library="glib" Value="dynamic" Condition="'$(Linkage-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-glib" />
+    </glib_Contains>
+    <glib_Contains Text="Linkage-static" Library="glib" Value="static" Condition="'$(Linkage-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-glib" />
+    </glib_Contains>
+    <glib_Contains Text="Linkage-ltcg" Library="glib" Value="ltcg" Condition="'$(Linkage-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-glib" />
+    </glib_Contains>
+    <glib_Contains Text="Linkage-sxs" Library="glib" Value="sxs" Condition="'$(Linkage-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-glib" />
+    </glib_Contains>
+    <glib_Contains Text="CallingConvention-cdecl" Library="glib" Value="cdecl" Condition="'$(CallingConvention-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-glib" />
+    </glib_Contains>
+    <glib_Contains Text="CallingConvention-stdcall" Library="glib" Value="stdcall" Condition="'$(CallingConvention-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-glib" />
+    </glib_Contains>
+    <glib_Contains Text="CallingConvention-fastcall" Library="glib" Value="fastcall" Condition="'$(CallingConvention-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-glib" />
+    </glib_Contains>
+    <glib_Contains Text="CallingConvention-thiscall" Library="glib" Value="thiscall" Condition="'$(CallingConvention-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-glib" />
+    </glib_Contains>
+    <glib_Contains Text="CallingConvention-clrcall" Library="glib" Value="clrcall" Condition="'$(CallingConvention-glib)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-glib" />
+    </glib_Contains>
+  </Target>
+  <Target Name="glib_init_2">
+    <SetEnv Condition="'$(PlatformToolset.ToLower())' == 'v100' And '$(Platform.ToLower())' == 'win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//tools/native/v100\Win32\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="( $(PlatformToolset.ToLower().IndexOf('v110')) &gt; -1 Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And '$(Platform.ToLower())' == 'win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//tools/native/v110\Win32\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(PlatformToolset.ToLower())' == 'v100' And '$(Platform.ToLower())' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//tools/native/v100\x64\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="( $(PlatformToolset.ToLower().IndexOf('v110')) &gt; -1 Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And '$(Platform.ToLower())' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//tools/native/v110\x64\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(PlatformToolset.ToLower())' == 'v100' And '$(Platform.ToLower())' == 'win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//tools/native/v100\Win32\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="( $(PlatformToolset.ToLower().IndexOf('v110')) &gt; -1 Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And '$(Platform.ToLower())' == 'win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//tools/native/v110\Win32\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(PlatformToolset.ToLower())' == 'v100' And '$(Platform.ToLower())' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//tools/native/v100\x64\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="( $(PlatformToolset.ToLower().IndexOf('v110')) &gt; -1 Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And '$(Platform.ToLower())' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-glib.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//tools/native/v110\x64\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+  </Target>
+  <UsingTask TaskName="glib_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+</Project>

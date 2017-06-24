@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="libintl_redist_init">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-libintl_redist Condition="'$(Linkage-libintl_redist)' == ''">dynamic</Linkage-libintl_redist>
+    <CallingConvention-libintl_redist Condition="'$(CallingConvention-libintl_redist)' == ''">cdecl</CallingConvention-libintl_redist>
+  </PropertyGroup>
+  <ItemGroup Label="Win32 and v110 and dynamic" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libintl_redist)' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\libintl.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\libintl.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v110 and dynamic" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libintl_redist)' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\libintl.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\libintl.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v100 and dynamic" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libintl_redist)' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\libintl.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\libintl.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v100 and dynamic" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libintl_redist)' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\libintl.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\libintl.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <Target Name="libintl_redist_AfterBuild" AfterTargets="AfterBuild" />
+  <Target Name="libintl_redist_AfterBuild_Win32_and_v110_and_dynamic" Label="Win32 and v110 and dynamic" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libintl_redist)' == 'dynamic'" AfterTargets="libintl_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\libintl.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\libintl.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libintl_redist_AfterBuild_x64_and_v110_and_dynamic" Label="x64 and v110 and dynamic" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libintl_redist)' == 'dynamic'" AfterTargets="libintl_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\libintl.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\libintl.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libintl_redist_AfterBuild_Win32_and_v100_and_dynamic" Label="Win32 and v100 and dynamic" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libintl_redist)' == 'dynamic'" AfterTargets="libintl_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\libintl.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\libintl.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libintl_redist_AfterBuild_x64_and_v100_and_dynamic" Label="x64 and v100 and dynamic" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libintl_redist)' == 'dynamic'" AfterTargets="libintl_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\libintl.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\libintl.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <UsingTask TaskName="libintl_redist_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="libintl_redist_init">
+    <libintl_redist_Contains Text="Linkage-dynamic" Library="libintl_redist" Value="dynamic" Condition="'$(Linkage-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libintl_redist" />
+    </libintl_redist_Contains>
+    <libintl_redist_Contains Text="Linkage-static" Library="libintl_redist" Value="static" Condition="'$(Linkage-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libintl_redist" />
+    </libintl_redist_Contains>
+    <libintl_redist_Contains Text="Linkage-ltcg" Library="libintl_redist" Value="ltcg" Condition="'$(Linkage-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libintl_redist" />
+    </libintl_redist_Contains>
+    <libintl_redist_Contains Text="Linkage-sxs" Library="libintl_redist" Value="sxs" Condition="'$(Linkage-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libintl_redist" />
+    </libintl_redist_Contains>
+    <libintl_redist_Contains Text="CallingConvention-cdecl" Library="libintl_redist" Value="cdecl" Condition="'$(CallingConvention-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl_redist" />
+    </libintl_redist_Contains>
+    <libintl_redist_Contains Text="CallingConvention-stdcall" Library="libintl_redist" Value="stdcall" Condition="'$(CallingConvention-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl_redist" />
+    </libintl_redist_Contains>
+    <libintl_redist_Contains Text="CallingConvention-fastcall" Library="libintl_redist" Value="fastcall" Condition="'$(CallingConvention-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl_redist" />
+    </libintl_redist_Contains>
+    <libintl_redist_Contains Text="CallingConvention-thiscall" Library="libintl_redist" Value="thiscall" Condition="'$(CallingConvention-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl_redist" />
+    </libintl_redist_Contains>
+    <libintl_redist_Contains Text="CallingConvention-clrcall" Library="libintl_redist" Value="clrcall" Condition="'$(CallingConvention-libintl_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libintl_redist" />
+    </libintl_redist_Contains>
+  </Target>
+</Project>

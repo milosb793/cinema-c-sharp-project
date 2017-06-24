@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="bioskop.Gtk3/bioskop.Gtk3.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="bioskop/modeli/Karta.cs">
+    <Files>
+      <File FileName="bioskop.Gtk3/Program.cs" Line="40" Column="36" />
+      <File FileName="bioskop/modeli/Projekcija.cs" Line="37" Column="24" />
+      <File FileName="bioskop/modeli/Karta.cs" Line="65" Column="1" />
+      <File FileName="bioskop/pregledi/komponente/Sedista.cs" Line="178" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/home/logos/MonodevelopProjects/bioskop/bioskop/pregledi/forme/izmena/IzmenaProjekcije.cs" line="47" column="1" />
+      <Breakpoint enabled="false" file="/home/logos/MonodevelopProjects/bioskop/bioskop/pregledi/forme/izmena/IzmenaProjekcije.cs" line="60" column="1" />
+      <Breakpoint enabled="false" file="/home/logos/MonodevelopProjects/bioskop/bioskop/pregledi/forme/izmena/IzmenaProjekcije.cs" line="40" column="1" />
+      <Breakpoint file="/home/logos/MonodevelopProjects/bioskop/bioskop/pregledi/forme/obrisi/ObrisiFilm.cs" line="91" column="1" />
+      <Breakpoint file="/home/logos/MonodevelopProjects/bioskop/bioskop/modeli/Sala.cs" line="33" column="1" />
+      <Breakpoint file="/home/logos/MonodevelopProjects/bioskop/bioskop/modeli/Karta.cs" line="199" column="1" />
+      <Breakpoint file="/home/logos/MonodevelopProjects/bioskop/bioskop/modeli/Karta.cs" line="200" column="1" />
+      <Breakpoint file="/home/logos/MonodevelopProjects/bioskop/bioskop/pregledi/komponente/Sedista.cs" line="178" column="1" />
+      <Breakpoint file="/home/logos/MonodevelopProjects/bioskop/bioskop/pregledi/komponente/Sedista.cs" line="173" column="1" />
+      <Breakpoint file="/home/logos/MonodevelopProjects/bioskop/bioskop/pregledi/komponente/Sedista.cs" line="160" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

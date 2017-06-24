@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="libffi_redist_init">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-libffi_redist Condition="'$(Linkage-libffi_redist)' == ''">dynamic</Linkage-libffi_redist>
+    <CallingConvention-libffi_redist Condition="'$(CallingConvention-libffi_redist)' == ''">cdecl</CallingConvention-libffi_redist>
+  </PropertyGroup>
+  <ItemGroup Label="Win32 and v110 and dynamic and Release" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Release'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\Release\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\Release\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v110 and dynamic and Release" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Release'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\Release\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\Release\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v100 and dynamic and Release" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Release'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\Release\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\Release\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v100 and dynamic and Release" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Release'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\Release\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\Release\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v110 and dynamic and Debug" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Debug'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\Debug\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\Debug\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v110 and dynamic and Debug" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Debug'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\Debug\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\Debug\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v100 and dynamic and Debug" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Debug'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\Debug\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\Debug\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v100 and dynamic and Debug" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Debug'">
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\Debug\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\Debug\libffi.dll" Condition="(('$(AppContainerApplication)' == 'true')) OR (('$(TargetPlatformIdentifier)' == 'Windows Phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <Target Name="libffi_redist_AfterBuild" AfterTargets="AfterBuild" />
+  <Target Name="libffi_redist_AfterBuild_Win32_and_v110_and_dynamic_and_Release" Label="Win32 and v110 and dynamic and Release" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Release'" AfterTargets="libffi_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\Release\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\Release\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libffi_redist_AfterBuild_x64_and_v110_and_dynamic_and_Release" Label="x64 and v110 and dynamic and Release" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Release'" AfterTargets="libffi_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\Release\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\Release\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libffi_redist_AfterBuild_Win32_and_v100_and_dynamic_and_Release" Label="Win32 and v100 and dynamic and Release" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Release'" AfterTargets="libffi_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\Release\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\Release\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libffi_redist_AfterBuild_x64_and_v100_and_dynamic_and_Release" Label="x64 and v100 and dynamic and Release" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Release'" AfterTargets="libffi_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\Release\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\Release\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libffi_redist_AfterBuild_Win32_and_v110_and_dynamic_and_Debug" Label="Win32 and v110 and dynamic and Debug" Condition="'$(Platform)' == 'Win32' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Debug'" AfterTargets="libffi_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\Debug\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v110\dynamic\Debug\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libffi_redist_AfterBuild_x64_and_v110_and_dynamic_and_Debug" Label="x64 and v110 and dynamic and Debug" Condition="'$(Platform)' == 'x64' And ( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Debug'" AfterTargets="libffi_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\Debug\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v110\dynamic\Debug\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libffi_redist_AfterBuild_Win32_and_v100_and_dynamic_and_Debug" Label="Win32 and v100 and dynamic and Debug" Condition="'$(Platform)' == 'Win32' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Debug'" AfterTargets="libffi_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\Debug\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\Win32\v100\dynamic\Debug\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="libffi_redist_AfterBuild_x64_and_v100_and_dynamic_and_Debug" Label="x64 and v100 and dynamic and Debug" Condition="'$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v100' And '$(Linkage-libffi_redist)' == 'dynamic' And '$(Configuration)' == 'Debug'" AfterTargets="libffi_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\Debug\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\..\build\native\bin\x64\v100\dynamic\Debug\libffi.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <UsingTask TaskName="libffi_redist_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="libffi_redist_init">
+    <libffi_redist_Contains Text="Linkage-dynamic" Library="libffi_redist" Value="dynamic" Condition="'$(Linkage-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libffi_redist" />
+    </libffi_redist_Contains>
+    <libffi_redist_Contains Text="Linkage-static" Library="libffi_redist" Value="static" Condition="'$(Linkage-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libffi_redist" />
+    </libffi_redist_Contains>
+    <libffi_redist_Contains Text="Linkage-ltcg" Library="libffi_redist" Value="ltcg" Condition="'$(Linkage-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libffi_redist" />
+    </libffi_redist_Contains>
+    <libffi_redist_Contains Text="Linkage-sxs" Library="libffi_redist" Value="sxs" Condition="'$(Linkage-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-libffi_redist" />
+    </libffi_redist_Contains>
+    <libffi_redist_Contains Text="CallingConvention-cdecl" Library="libffi_redist" Value="cdecl" Condition="'$(CallingConvention-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi_redist" />
+    </libffi_redist_Contains>
+    <libffi_redist_Contains Text="CallingConvention-stdcall" Library="libffi_redist" Value="stdcall" Condition="'$(CallingConvention-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi_redist" />
+    </libffi_redist_Contains>
+    <libffi_redist_Contains Text="CallingConvention-fastcall" Library="libffi_redist" Value="fastcall" Condition="'$(CallingConvention-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi_redist" />
+    </libffi_redist_Contains>
+    <libffi_redist_Contains Text="CallingConvention-thiscall" Library="libffi_redist" Value="thiscall" Condition="'$(CallingConvention-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi_redist" />
+    </libffi_redist_Contains>
+    <libffi_redist_Contains Text="CallingConvention-clrcall" Library="libffi_redist" Value="clrcall" Condition="'$(CallingConvention-libffi_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-libffi_redist" />
+    </libffi_redist_Contains>
+  </Target>
+</Project>
